@@ -17,16 +17,17 @@ public function index() {
  
         $emp_username=$this->input->post('username');
 		$emp_password=$this->input->post('password');
-		if($emp_username=='admin' && $emp_password=='admin'){
-		$data['result'] = "Login Successfully";
-		$this->load->view('test',$data);
-	}else{
 
-		$response['Error'] = 1;
+		if($emp_username=='admin' && $emp_password=='admin'){
+		$data['result'] = "Success";
+		$data['url'] = base_url();
+ 		$this->output->set_status_header(200)->set_content_type('application/json')->set_output(json_encode($data));
+ 	}else{
+
+		$response['result'] = "Error";
         $this->output->set_status_header(200)->set_content_type('application/json')->set_output(json_encode($response));
  
-		redirect('user?act=F', 'refresh');
-	}
+ 	}
 
     }
 }

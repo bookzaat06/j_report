@@ -46,21 +46,12 @@
 									Sign In To Report
 								</h3>
 							</div>
-                            <form class="m-login__form m-form" action="user/check"  method="post">
-							<?php
-@$act = $_GET['act'];
-if ('F' == $act) { 
-    echo "<font color='red'>";
-    echo 'Login False';
-    echo "</font>";
-    echo "<br />";
-}
-?>
-								<div class="form-group m-form__group">
-									<input class="form-control m-input"   type="text" placeholder="Username" name="username" autocomplete="off">
+                            <form class="m-login__form m-form" id="login_form" action="user/check"  method="post"> 
+ 								<div class="form-group m-form__group">
+									<input class="form-control m-input"   type="text" placeholder="Username" title="กรุณากรอก User!" name="username" autocomplete="off" required>
 								</div>
 								<div class="form-group m-form__group">
-									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" title="กรุณากรอก Password!" name="password" required> 
 								</div>
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left m-login__form-left">
@@ -72,10 +63,9 @@ if ('F' == $act) {
 									</div>
 
                                 </div>
-                                <button type="submit"> Login </button>
-
+ 
 								<div class="m-login__form-action">
-									<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">
+									<button  id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">
 										Sign In
 									</button>
 								</div>
@@ -90,23 +80,7 @@ if ('F' == $act) {
 		</div>
 		<!-- end:: Page -->
     	<!--begin::Base Scripts -->
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-		<?php
- if ('F' == $act) { 
-	 ?>
-	<script> 
-	$(document).ready(function () {
-		
-		$("#m_login").addClass("m-loader m-loader--right m-loader--light").attr("disabled",!0).html('<div class="m-alert m-alert--outline alert alert-danger alert-dismissible" role="alert">\t\t\t<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>\t\t\t<span>test</span>\t\t</div>');
-	});
-	</script>; 
-
-
-<?php
- }
-?>
-
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
 		<script src="<?php echo base_url(); ?>assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
 		<script src="<?php echo base_url(); ?>assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 		<!--end::Base Scripts -->
