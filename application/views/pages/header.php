@@ -21,10 +21,10 @@
 		</script>
 		<!--end::Web font -->
         <!--begin::Base Styles -->
-		<link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url(); ?>assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url(); ?>assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/demo/default/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="<?=base_url(); ?>assets/demo/default/media/img/logo/favicon.ico" />
 	</head>
     <!-- end::Head -->
     
@@ -41,7 +41,7 @@
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo text-white ">  
                                 
-                                        <img  height="35px" src="<?php echo base_url(); ?>assets/images/chart.png"/> 
+                                        <img  height="35px" src="<?=base_url(); ?>assets/images/chart.png"/> 
                                          Report  
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -85,7 +85,7 @@
 										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
 											<a href="#" class="m-nav__link m-dropdown__toggle">
 												<span class="m-topbar__userpic">
-													<img src="<?php echo base_url(); ?>assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless m--img-centered" alt=""/>
+													<img src="<?=base_url(); ?>assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless m--img-centered" alt=""/>
 												</span>
 												<span class="m-topbar__username m--hide">
 													Nick
@@ -97,7 +97,7 @@
 													<div class="m-dropdown__header m--align-center" style="background: url(<?php echo base_url(); ?>assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
 														<div class="m-card-user m-card-user--skin-dark">
 															<div class="m-card-user__pic">
-																<img src="<?php echo base_url(); ?>assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt=""/>
+																<img src="<?=base_url(); ?>assets/app/media/img/users/user4.jpg" class="m--img-rounded m--marginless" alt=""/>
 															</div>
 															<div class="m-card-user__details">
 																<span class="m-card-user__name m--font-weight-500">
@@ -119,7 +119,7 @@
 																</li> 
 																<li class="m-nav__separator m-nav__separator--fit"></li>
 																<li class="m-nav__item">
-																	<a href="<?php echo base_url(); ?>snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+																	<a href="<?=base_url(); ?>snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
 																		Logout
 																	</a>
 																</li>
